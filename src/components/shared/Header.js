@@ -19,8 +19,13 @@ const authenticatedOptions = (
 			</Link>
 		</Nav.Item>
 		<Nav.Item>
-			<Link to='cars' style={linkStyle}>
+			<Link to='create' style={linkStyle}>
 				Add a car
+			</Link>
+		</Nav.Item>
+		<Nav.Item>
+			<Link to='cars' style={linkStyle}>
+				Index all cars
 			</Link>
 		</Nav.Item>
 	</>

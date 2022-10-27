@@ -5,13 +5,14 @@ const CarCreate = ({ user, msgAlert }) => {
 
     const defaultCar = {
         make: '',
-        model: ''
+        model: '',
+        year: ''
     }
 
     const [car, setCar] = useState(defaultCar)
 
     const handleChange = (event) => {
-        setCar({...car, [event.target.make]: event.target.value})
+        setCar({...car, [event.target.name]: event.target.value})
     }
 
     const handleCreateCar = () => {
@@ -34,16 +35,22 @@ const CarCreate = ({ user, msgAlert }) => {
 
     return (
 			<>
-				<input
+                <input
 					type='text'
 					value={car.make}
-					name='name'
+					name='make'
 					onChange={handleChange}
 				/>
 				<input
 					type='text'
 					value={car.model}
-					name='name'
+					name='model'
+					onChange={handleChange}
+				/>
+                <input
+					type='text'
+					value={car.year}
+					name='year'
 					onChange={handleChange}
 				/>
 				<button onClick={handleCreateCar}>Add car</button>
